@@ -1,14 +1,16 @@
 package Main;
 
+import Classes.Date;
+import Classes.Human.*;
+import Enums.Months;
 import Interfaces.*;
-import Classes.*;
 
 public class Main {
 
     public static void main(String[] args) {
     	Human male = new Male("fahim faisal", 22, "Rajshahi");
 
-    	male.setBirthDate("19 Jan ");
-		System.out.println(male.toString());
+    	male.setBirthDate();
+    	System.out.println(male.toString());
     }
 }
