@@ -1,6 +1,7 @@
 package Interfaces;
 
 import Enums.Gender;
+import Classes.Date;
 
 public interface Human {
 	String getName();
@@ -9,11 +10,11 @@ public interface Human {
 	int getAge();
 	void setAge(int age);
 
-	String getBirthDate();
-	void setBirthDate(String date);
+	Date getBirthDate();
+	void setBirthDate();
 
-	String getDeathDate();
-	void setDeathDate(String date);
+	Date getDeathDate();
+	void setDeathDate();
 
 	String getLocation();
 	void setLocation(String location);

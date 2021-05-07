@@ -15,4 +15,6 @@ public interface Date {
 
 	int getYear();
 	void setYear(int year);
+
+	String toString();
 }
