@@ -1,13 +1,14 @@
-package Classes;
+package Classes.Human;
 
+import Classes.Date;
 import Enums.Gender;
 import Interfaces.Human;
 
 public class Male implements Human {
 	private String name;
 	private int age;
-	private String birthDate;
-	private String deathDate;
+	private Date birthDate;
+	private Date deathDate;
 	private String location;
 	private String profession;
 
@@ -16,8 +17,8 @@ public class Male implements Human {
 		this.age = age;
 		this.location = location;
 
-		this.birthDate = null;
-		this.deathDate = null;
+		this.birthDate = new Date();
+		this.deathDate = new Date();
 		this.profession = null;
 	}
 
@@ -42,23 +43,33 @@ public class Male implements Human {
 	}
 
 	@Override
-	public String getBirthDate() {
+	public Date getBirthDate() {
 		return this.birthDate;
 	}
 
 	@Override
-	public void setBirthDate(String date) {
-		this.birthDate = date;
+	public void setBirthDate() {
+		String event = "birth";
+
+		this.birthDate.setDayByUser(event);
+		this.birthDate.setDateByUser(event);
+		this.birthDate.setMonthByUser(event);
+		this.birthDate.setYearByUser(event);
 	}
 
 	@Override
-	public String getDeathDate() {
+	public Date getDeathDate() {
 		return this.deathDate;
 	}
 
 	@Override
-	public void setDeathDate(String date) {
-		this.deathDate = date;
+	public void setDeathDate() {
+		String event = "death";
+
+		this.deathDate.setDayByUser(event);
+		this.deathDate.setDateByUser(event);
+		this.deathDate.setMonthByUser(event);
+		this.deathDate.setYearByUser(event);
 	}
 
 	@Override
