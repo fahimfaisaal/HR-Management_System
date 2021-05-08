@@ -1,16 +1,15 @@
 package Main;
 
-import Classes.Date;
-import Classes.Human.*;
-import Enums.Months;
+import Classes.*;
+import Enums.Gender;
 import Interfaces.*;
 
 public class Main {
 
     public static void main(String[] args) {
-    	Human male = new Male("fahim faisal", 22, "Rajshahi");
+        Employ employ = new Employ("fahim faisal", 22, Gender.FEMALE);
 
-    	male.setBirthDate();
-    	System.out.println(male.toString());
+        employ.setRelationshipByUser();
+        System.out.println(employ.toString());
     }
 }
