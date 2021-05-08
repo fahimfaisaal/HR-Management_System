@@ -1,6 +1,5 @@
-package Classes.Human;
+package Classes;
 
-import Classes.Date;
 import Enums.Gender;
 import Enums.Relationship;
 import Interfaces.Human;
@@ -14,15 +13,17 @@ public class Employ implements Human {
 	private Date deathDate;
 	private String location;
 	private String profession;
+	private Gender gender;
 	private Relationship relationship = Relationship.SINGLE;
 
 	private final Scanner scan = new Scanner(System.in);
 
-	public Employ(String name, int age, String location) {
+	public Employ(String name, int age, Gender gender) {
 		this.name = name;
 		this.age = age;
-		this.location = location;
+		this.gender = gender;
 
+		this.location = null;
 		this.birthDate = new Date();
 		this.deathDate = new Date();
 		this.profession = null;
@@ -98,7 +99,12 @@ public class Employ implements Human {
 
 	@Override
 	public Gender getGender() {
-		return Gender.MALE;
+		return this.gender;
+	}
+
+	@Override
+	public void setGender(Gender gender) {
+		this.gender = gender;
 	}
 
 	@Override
@@ -132,17 +138,17 @@ public class Employ implements Human {
 		this.profession = profession;
 	}
 
-
 	@Override
 	public String toString() {
-		return "Male {" + '\n' +
+		return "Employ {" + '\n' +
 		" name = " + this.getName() + ",\n" +
 		" age = " + this.getAge() + ",\n" +
 		" location = " + this.getLocation() + ",\n" +
 		" birthDate = " + this.getBirthDate() + ",\n" +
 		" deathDate = " + (this.getDeathDate().getDay() == null ? "Alive" : this.getDeathDate()) + ",\n" +
 		" profession = " + this.getProfession() + ",\n" +
-		" relationship = " + this.getRelationship() + ",\n" +
+		" gender = " + this.getGender().toString() + ",\n" +
+		" relationship = " + this.getRelationship() + "\n" +
 		"}\n";
 	}
 }

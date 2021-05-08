@@ -52,6 +52,11 @@ public class Date implements Interfaces.Date {
 		return this.day;
 	}
 
+	@Override
+	public void setDay(Days day) {
+		this.day = day;
+	}
+
 	public void setDayByUser(String event) {
 		while (true) {
 			this.displayDays();
@@ -70,13 +75,13 @@ public class Date implements Interfaces.Date {
 	}
 
 	@Override
-	public void setDay(Days day) {
-		this.day = day;
+	public int getDate() {
+		return this.date;
 	}
 
 	@Override
-	public int getDate() {
-		return this.date;
+	public void setDate(int date) {
+		this.date = date;
 	}
 
 	public void setDateByUser(String event) {
@@ -95,11 +100,6 @@ public class Date implements Interfaces.Date {
 		}
 	}
 
-	@Override
-	public void setDate(int date) {
-		this.date = date;
-	}
-
 	public void displayMonths() {
 		StringBuilder months = new StringBuilder();
 
@@ -113,6 +113,11 @@ public class Date implements Interfaces.Date {
 	@Override
 	public Months getMonth() {
 		return this.month;
+	}
+
+	@Override
+	public void setMonth(Months month) {
+		this.month = month;
 	}
 
 	public void setMonthByUser(String event) {
@@ -133,13 +138,13 @@ public class Date implements Interfaces.Date {
 	}
 
 	@Override
-	public void setMonth(Months month) {
-		this.month = month;
+	public int getYear() {
+		return this.year;
 	}
 
 	@Override
-	public int getYear() {
-		return this.year;
+	public void setYear(int year) {
+		this.year = year;
 	}
 
 	public void setYearByUser(String event) {
@@ -158,17 +163,12 @@ public class Date implements Interfaces.Date {
 	}
 
 	@Override
-	public void setYear(int year) {
-		this.year = year;
-	}
-
-	@Override
 	public String toString() {
 		return "Date {" + '\n' +
-		" day=" + this.getDay() + ",\n" +
-		" date=" + this.getDate() + ",\n" +
-		" month=" + this.getMonth() + ",\n" +
-		" year=" + this.getYear() + ",\n" +
+		" day = " + this.getDay() + ",\n" +
+		" date = " + this.getDate() + ",\n" +
+		" month = " + this.getMonth() + ",\n" +
+		" year = " + this.getYear() + ",\n" +
 		'}';
 	}
 }
