@@ -15,6 +15,7 @@ public class Employ implements Human {
 	private String profession;
 	private Gender gender;
 	private Relationship relationship = Relationship.SINGLE;
+	private final Resume resume = new Resume();
 
 	private final Scanner scan = new Scanner(System.in);
 
@@ -138,6 +139,10 @@ public class Employ implements Human {
 		this.profession = profession;
 	}
 
+	public Resume getResume() {
+		return this.resume;
+	}
+
 	@Override
 	public String toString() {
 		return "Employ {" + '\n' +
@@ -149,6 +154,7 @@ public class Employ implements Human {
 		" profession = " + this.getProfession() + ",\n" +
 		" gender = " + this.getGender().toString() + ",\n" +
 		" relationship = " + this.getRelationship() + "\n" +
+		" resume = " + this.getResume().toString() + "\n" +
 		"}\n";
 	}
 }
