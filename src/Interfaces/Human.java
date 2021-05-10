@@ -28,6 +28,4 @@ public interface Human {
 
 	String getProfession();
 	void setProfession(String profession);
-
-	String toString();
 }
