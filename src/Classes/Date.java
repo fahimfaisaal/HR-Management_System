@@ -89,6 +89,7 @@ public class Date implements Interfaces.Date {
 			System.out.print("Enter " + event + " Date: ");
 
 			int date = scan.nextInt();
+			scan.nextLine();
 
 			if (date > 31 || date < 1) {
 				System.out.println("\n__Error, Date is Invalid!__\n");
@@ -160,6 +161,10 @@ public class Date implements Interfaces.Date {
 			this.setYear(year);
 			break;
 		}
+	}
+
+	public String toDateFormat() {
+		return this.getDate() + "-" + this.getMonth() + "-" + this.getYear() + " (" + this.getDay() + ")";
 	}
 
 	@Override

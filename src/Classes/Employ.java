@@ -15,7 +15,7 @@ public class Employ implements Human {
 	private String profession;
 	private Gender gender;
 	private Relationship relationship = Relationship.SINGLE;
-	private final Resume resume = new Resume();
+	private Resume resume = null;
 
 	private final Scanner scan = new Scanner(System.in);
 
@@ -23,6 +23,7 @@ public class Employ implements Human {
 		this.name = name;
 		this.age = age;
 		this.gender = gender;
+		this.resume = new Resume(this.getName(), this.getAge(), this.getBirthDate());
 
 		this.location = null;
 		this.birthDate = new Date();
@@ -58,6 +59,7 @@ public class Employ implements Human {
 	@Override
 	public void setBirthDate(Date date) {
 		this.birthDate = date;
+		this.resume.setBirthDate(this.getBirthDate());
 	}
 
 	public void setBirthDateByUser() {
@@ -67,6 +69,8 @@ public class Employ implements Human {
 		this.birthDate.setDateByUser(event);
 		this.birthDate.setMonthByUser(event);
 		this.birthDate.setYearByUser(event);
+
+		this.resume.setBirthDate(this.getBirthDate());
 	}
 
 	@Override

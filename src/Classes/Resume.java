@@ -1,17 +1,55 @@
 package Classes;
 
+import Classes.Education.Education;
+
 import java.util.LinkedList;
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class Resume {
+	private String name = null;
+	private int age = 0;
+	private Date birthDate = null;
 	private String phone = null;
 
 	private final Social socialLinks = new Social();
-	private final Education education = new Education();
+	private Education education = null;
 	private final LinkedList<String> skills = new LinkedList<>();
 	private final LinkedList<String> language = new LinkedList<>();
 	private final Scanner scan = new Scanner(System.in);
+
+	public Resume(String name, int age, Date bd) {
+		this.name = name;
+		this.age = age;
+		this.birthDate = bd;
+
+		this.education = new Education(this.getName(), this.getAge(), this.getBirthDate());
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return this.age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public Date getBirthDate() {
+		return this.birthDate;
+	}
+
+	public void setBirthDate(Date birthDate) {
+		this.birthDate = birthDate;
+		this.education.setBirthDate(birthDate);
+	}
 
 	public Social getSocialLinks() {
 		return this.socialLinks;

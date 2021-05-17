@@ -1,5 +1,7 @@
 package Classes;
 
+import java.util.Scanner;
+
 public class Social {
 	private String facebook = null;
 	private String linkedin = null;
@@ -8,6 +10,7 @@ public class Social {
 	private String stackoverflow = null;
 
 	private String portfolio = null;
+	private Scanner scan = new Scanner(System.in);
 
 	public String getFacebook() {
 		return this.facebook;
@@ -55,6 +58,26 @@ public class Social {
 
 	public void setPortfolio(String portfolio) {
 		this.portfolio = portfolio;
+	}
+
+	public void setSocialByUser() {
+		System.out.print("Enter your facebook user name: ");
+		this.setFacebook(scan.nextLine());
+
+		System.out.print("Enter your twitter user name: ");
+		this.setTwitter(scan.nextLine());
+
+		System.out.print("Enter your linkedin user name: ");
+		this.setLinkedin(scan.nextLine());
+
+		System.out.print("Enter your github user name: ");
+		this.setGithub(scan.nextLine());
+
+		System.out.print("Enter your twitter user name: ");
+		this.setStackoverflow(scan.nextLine());
+
+		System.out.print("Enter your portfolio link: ");
+		this.setPortfolio(scan.nextLine());
 	}
 
 	@Override
