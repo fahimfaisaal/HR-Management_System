@@ -10,7 +10,7 @@ public class Social {
 	private String stackoverflow = null;
 
 	private String portfolio = null;
-	private Scanner scan = new Scanner(System.in);
+	private final Scanner scan = new Scanner(System.in);
 
 	public String getFacebook() {
 		return this.facebook;
@@ -61,19 +61,19 @@ public class Social {
 	}
 
 	public void setSocialByUser() {
-		System.out.print("Enter your facebook user name: ");
+		System.out.print("Enter your facebook username: ");
 		this.setFacebook(scan.nextLine());
 
-		System.out.print("Enter your twitter user name: ");
+		System.out.print("Enter your twitter username: ");
 		this.setTwitter(scan.nextLine());
 
-		System.out.print("Enter your linkedin user name: ");
+		System.out.print("Enter your linkedin username: ");
 		this.setLinkedin(scan.nextLine());
 
-		System.out.print("Enter your github user name: ");
+		System.out.print("Enter your github username: ");
 		this.setGithub(scan.nextLine());
 
-		System.out.print("Enter your twitter user name: ");
+		System.out.print("Enter your Stackoverflow username: ");
 		this.setStackoverflow(scan.nextLine());
 
 		System.out.print("Enter your portfolio link: ");

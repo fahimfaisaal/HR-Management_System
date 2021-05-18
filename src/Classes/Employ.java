@@ -127,6 +127,7 @@ public class Employ implements Human {
 		System.out.print("Select relation status: ");
 
 		int in = scan.nextInt();
+		scan.nextLine();
 
 		if (in == 2) {
 			this.setRelationship(Relationship.MARRIED);
@@ -141,6 +142,12 @@ public class Employ implements Human {
 	@Override
 	public void setProfession(String profession) {
 		this.profession = profession;
+	}
+
+	public void setProfessionByUser() {
+		System.out.print("Enter you profession: ");
+
+		this.setProfession(scan.nextLine());
 	}
 
 	public Resume getResume() {

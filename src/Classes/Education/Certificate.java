@@ -130,7 +130,7 @@ public class Certificate {
   		Name: %s
   		Birth date: %s
   		Institute: %s %s
-  		Total Result: %s
+  		Total Result: %s %s
   		Semester: %s
   		Subject: %s
   		________________________________________________________________________________
@@ -140,6 +140,7 @@ public class Certificate {
 				this.getInstituteName(),
 				this.getInstituteType(),
 				this.getTotalResult(),
+				this.getResultUnit(),
 				this.getSession(),
 				this.getSubject());
 	}

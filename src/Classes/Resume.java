@@ -91,7 +91,7 @@ public class Resume {
 		this.skills.add(skill);
 	}
 
-	public void setSkillsByUser() {
+	public Resume setSkillsByUser() {
 		System.out.print("Enter the number of skills: ");
 		int numberOfSkills = scan.nextInt();
 		scan.nextLine();
@@ -100,6 +100,8 @@ public class Resume {
 			System.out.print("Add skill " + i + " : ");
 			this.setSkills(scan.nextLine());
 		}
+
+		return this;
 	}
 
 	public String getAllSkills() {
@@ -125,7 +127,7 @@ public class Resume {
 		this.getLanguage().add(language);
 	}
 
-	public void setLanguageByUser() {
+	public Resume setLanguageByUser() {
 		System.out.print("Enter the number of language: ");
 		int numberOfLanguage = scan.nextInt();
 		scan.nextLine();
@@ -134,6 +136,8 @@ public class Resume {
 			System.out.print("Add language " + i + " : ");
 			this.setLanguage(scan.nextLine());
 		}
+
+		return this;
 	}
 
 	public String getAllLanguage() {
