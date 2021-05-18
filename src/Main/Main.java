@@ -13,9 +13,7 @@ public class Main {
     public static void main(String[] args) {
         Employ employ = new Employ("fahim", 22, Gender.MALE);
 
-        employ.setBirthDateByUser();
-        employ.setRelationshipByUser();
-        employ.setProfessionByUser();
+       employ = employ.setBirthDateByUser().setRelationshipByUser().setProfessionByUser();
 
         employ.getResume().setLanguageByUser().setSkillsByUser().getSocialLinks().setSocialByUser();
         employ.getResume().getEducation().setCertificatesByUser();
