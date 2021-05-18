@@ -62,7 +62,7 @@ public class Employ implements Human {
 		this.resume.setBirthDate(this.getBirthDate());
 	}
 
-	public void setBirthDateByUser() {
+	public Employ setBirthDateByUser() {
 		String event = "birth";
 
 		this.birthDate.setDayByUser(event);
@@ -71,6 +71,8 @@ public class Employ implements Human {
 		this.birthDate.setYearByUser(event);
 
 		this.resume.setBirthDate(this.getBirthDate());
+
+		return this;
 	}
 
 	@Override
@@ -83,13 +85,15 @@ public class Employ implements Human {
 		this.deathDate = date;
 	}
 
-	public void setDeathDateByUser() {
+	public Employ setDeathDateByUser() {
 		String event = "death";
 
 		this.deathDate.setDayByUser(event);
 		this.deathDate.setDateByUser(event);
 		this.deathDate.setMonthByUser(event);
 		this.deathDate.setYearByUser(event);
+
+		return this;
 	}
 
 	@Override
@@ -122,7 +126,7 @@ public class Employ implements Human {
 		this.relationship = relationship;
 	}
 
-	public void setRelationshipByUser() {
+	public Employ setRelationshipByUser() {
 		System.out.println("1. Single\n2. Married");
 		System.out.print("Select relation status: ");
 
@@ -132,6 +136,8 @@ public class Employ implements Human {
 		if (in == 2) {
 			this.setRelationship(Relationship.MARRIED);
 		}
+
+		return this;
 	}
 
 	@Override
@@ -144,10 +150,12 @@ public class Employ implements Human {
 		this.profession = profession;
 	}
 
-	public void setProfessionByUser() {
+	public Employ setProfessionByUser() {
 		System.out.print("Enter you profession: ");
 
 		this.setProfession(scan.nextLine());
+
+		return this;
 	}
 
 	public Resume getResume() {
