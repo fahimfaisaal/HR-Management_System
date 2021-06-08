@@ -5,7 +5,7 @@ import Enums.Months;
 
 import java.util.Scanner;
 
-public class Date implements Interfaces.Date {
+public class Date {
 	private Days day = null;
 	private int date = 0;
 	private Months month = null;
@@ -13,28 +13,28 @@ public class Date implements Interfaces.Date {
 	private final Scanner scan = new Scanner(System.in);
 
 	private final Months[] months = {
-		Months.JAN,
-		Months.FEB,
-		Months.MAR,
-		Months.APR,
-		Months.MAY,
-		Months.JUN,
-		Months.JUL,
-		Months.AUG,
-		Months.SEP,
-		Months.OCT,
-		Months.NOV,
-		Months.DEC
+	Months.JAN,
+	Months.FEB,
+	Months.MAR,
+	Months.APR,
+	Months.MAY,
+	Months.JUN,
+	Months.JUL,
+	Months.AUG,
+	Months.SEP,
+	Months.OCT,
+	Months.NOV,
+	Months.DEC
 	};
 
 	private final Days[] days = {
-		Days.SAT,
-		Days.SUN,
-		Days.MON,
-		Days.TUE,
-		Days.WED,
-		Days.THU,
-		Days.FRI
+	Days.SAT,
+	Days.SUN,
+	Days.MON,
+	Days.TUE,
+	Days.WED,
+	Days.THU,
+	Days.FRI
 	};
 
 	public void displayDays() {
@@ -47,12 +47,10 @@ public class Date implements Interfaces.Date {
 		System.out.print(days);
 	}
 
-	@Override
 	public Days getDay() {
 		return this.day;
 	}
 
-	@Override
 	public void setDay(Days day) {
 		this.day = day;
 	}
@@ -74,12 +72,10 @@ public class Date implements Interfaces.Date {
 		}
 	}
 
-	@Override
 	public int getDate() {
 		return this.date;
 	}
 
-	@Override
 	public void setDate(int date) {
 		this.date = date;
 	}
@@ -111,12 +107,10 @@ public class Date implements Interfaces.Date {
 		System.out.print(months);
 	}
 
-	@Override
 	public Months getMonth() {
 		return this.month;
 	}
 
-	@Override
 	public void setMonth(Months month) {
 		this.month = month;
 	}
@@ -138,12 +132,10 @@ public class Date implements Interfaces.Date {
 		}
 	}
 
-	@Override
 	public int getYear() {
 		return this.year;
 	}
 
-	@Override
 	public void setYear(int year) {
 		this.year = year;
 	}

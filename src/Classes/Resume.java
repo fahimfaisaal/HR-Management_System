@@ -1,6 +1,6 @@
 package Classes;
 
-import Classes.Education.Education;
+import Classes.Education.*;
 
 import java.util.LinkedList;
 import java.util.Scanner;

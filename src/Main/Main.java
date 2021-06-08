@@ -1,10 +1,8 @@
 package Main;
 
-import Classes.*;
-import Classes.Date;
-import Classes.Education.Certificate;
-import Enums.Gender;
-import Interfaces.*;
+import Classes.Education.*;
+import Classes.Employ;
+import Enums.*;
 
 import java.util.LinkedList;
 

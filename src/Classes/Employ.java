@@ -2,11 +2,10 @@ package Classes;
 
 import Enums.Gender;
 import Enums.Relationship;
-import Interfaces.Human;
 
 import java.util.Scanner;
 
-public class Employ implements Human {
+public class Employ {
 	private String name;
 	private int age;
 	private Date birthDate;
@@ -31,32 +30,26 @@ public class Employ implements Human {
 		this.profession = null;
 	}
 
-	@Override
 	public String getName() {
 		return this.name;
 	}
 
-	@Override
 	public void setName(String name) {
 		this.name = name;
 	}
 
-	@Override
 	public int getAge() {
 		return this.age;
 	}
 
-	@Override
 	public void setAge(int age) {
 		this.age = age;
 	}
 
-	@Override
 	public Date getBirthDate() {
 		return this.birthDate;
 	}
 
-	@Override
 	public void setBirthDate(Date date) {
 		this.birthDate = date;
 		this.resume.setBirthDate(this.getBirthDate());
